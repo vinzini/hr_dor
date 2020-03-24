@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('login', 'AccessTokenController@issueToken');
+Route::post('login', 'AccessTokenController@issueToken')->middleware('config.client');
 
 //Route::post('oauth/token', 'AccessTokenController@issueToken');
 
