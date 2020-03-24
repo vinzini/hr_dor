@@ -1,5 +1,6 @@
 <?php
 
+use App\Staffs\StaffsRepository;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+

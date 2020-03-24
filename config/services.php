@@ -34,4 +34,17 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'search' => [
+        'enabled' => env('ELASTICSEARCH_ENABLED', false),
+        'hosts' => [
+                [
+                    'host' => env('ELASTICSEARCH_HOST'),
+                    'port' => env('ELASTICSEARCH_PORT'),
+                    'scheme' => env('ELASTICSEARCH_SCHEME'),
+                    'user' => env('ELASTICSEARCH_USER'),
+                    'pass' => env('ELASTICSEARCH_PASS'),
+                ]
+            ]
+    ],
+
 ];

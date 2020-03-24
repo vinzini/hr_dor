@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,7 +22,10 @@ Route::group(['middleware' => 'auth:api'], function() {
        Route::get('logout', 'UserController@logout');
        Route::get('user', 'UserController@user');
        Route::post('refresh', '\App\Http\Controllers\AccessTokenController@issueToken');
-
        // Route::get('company_dashboard', 'UserController@user')->middleware('checkRole:1');
        // Route::get('bank_dashboard', 'UserController@user')->middleware('checkRole:2');
 });
+
+Route::get('search', 'StaffController@search');
+
+
